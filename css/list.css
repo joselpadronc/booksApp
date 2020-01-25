@@ -1,0 +1,53 @@
+.container_book {
+  background-color: white;
+  box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.2);
+  width: 650px;
+  padding: 20px;
+  margin-top: 25px;
+  border-radius: 5px;
+}
+
+.container_book h4 {
+  font-size: 24px;
+}
+
+.container_book p {
+  margin-top: 10px;
+}
+
+.book_options button {
+  margin-top: 10px;
+  cursor: pointer;
+  width: 100px;
+  padding: 10px;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  background-color: whitesmoke;
+}
+
+.book_options button > a {
+  text-decoration: none;
+  font-size: 16px;
+  color: black;
+  font-weight: 400;
+}
+
+@media only screen and (max-width: 780px) {
+  .container_book {
+    width: 420px;
+  }
+}
+
+@media only screen and (max-width: 479px) {
+  .container_book {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px 0;
+  }
+  
+  .container_book h4, p {
+    text-align: center
+  }
+}
