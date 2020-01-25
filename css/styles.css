@@ -49,13 +49,13 @@
   padding: 10px;
   border: none;
   border-radius: 0 5px 5px 0;
-  background-color: whitesmoke;
+  background-color: rgb(6, 172, 172);
 }
 
 .header_input button a {
   text-decoration: none;
   font-size: 16px;
-  color: black;
+  color: white;
   font-weight: 400;
 }
 
@@ -104,13 +104,13 @@
   padding: 10px;
   border: none;
   border-radius: 0 5px 5px 0;
-  background-color: whitesmoke;
+  background-color: rgb(6, 172, 172);
 }
 
 .container_search button > a {
   text-decoration: none;
   font-size: 16px;
-  color: black;
+  color: white;
   font-weight: 400;
 }
 
@@ -136,13 +136,13 @@
   padding: 15px;
   border: none;
   border-radius: 5px;
-  background-color: whitesmoke;
+  background-color: rgb(6, 172, 172);
 }
 
 .container_form button > a {
   text-decoration: none;
-  font-size: 16px;
-  color: black;
+  font-size: 18px;
+  color: white;
   font-weight: 400;
 }
 
@@ -153,6 +153,7 @@ footer {
   text-align: center;
   margin-top: 50px;
   padding: 20px 0;
+  bottom: 0;
 }
 
 footer h2 {
