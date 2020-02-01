@@ -1,17 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Books app</title>
-    <link rel="stylesheet" href="css/styles.css" />
-  </head>
-  <body>
+{% extends 'base.html' %}
+
+<!-- Title of the app -->
+{% block title %}
+
+  {{ super() }} | List
+
+{% endblock %}
+
+<!-- Body of the app -->
+{% block content %}
     <header class="header">
       <div class="header_img">
         <figure>
-          <img src="images/undraw_collecting_fjjl.svg" alt="" />
+          <img src="{{ url_for( 'static', filename='images/undraw_collecting_fjjl.svg' ) }}" alt="" />
         </figure>
       </div>
       <div class="header_input">
@@ -20,8 +21,8 @@
       </div>
       <div class="header_menu">
         <div class="header_menu--links">
-          <a href="index.html">Start</a>
-          <a href="list.html">Books saved</a>
+          <a href="{{ url_for('index') }}">Start</a>
+          <a href="{{ url_for('books_list') }}">Books saved</a>
         </div>
       </div>
     </header>
@@ -34,16 +35,17 @@
         </div>
         <div class="container_form">
           <h1>Add books to list</h1>
-          <input type="text" placeholder="Name of book" />
-          <input type="textarea" placeholder="Desciption of book" />
-          <input type="text" placeholder="Author of book" />
-          <input type="text" placeholder="Launching of book" />
-          <button><a href="#">Save</a></button>
+          <form method="POST" action="url_for('http://127.0.0.1:8080/api/books')">
+            <input type="text" placeholder="Name of book" />
+            <input type="textarea" placeholder="Desciption of book" />
+            <input type="text" placeholder="Author of book" />
+            <input type="text" placeholder="Launching of book" />
+            <input type="submit" name="Save" class="save">
+          </form>
         </div>
       </div>
     </section>
     <footer>
       <h2>Development by <a href="https://github.com/joselpadronc/">@joselpadronc</a></h2>
     </footer>
-  </body>
-</html>
+{% endblock %}
